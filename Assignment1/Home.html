@@ -7,69 +7,70 @@
 </head>
 <body>
     <header>
-        <h1>Game</h1>
+        <h1>Bouncebuds</h1>
+        <samp><span class="cmdtext">C:\User\tanvi></span> <kbd>cd C:/gamemaker/bouncebuds</kbd><span class="cursor">█</span></samp>
+        <!--<small>last visited: <time datetime="2024-01-31T15:30:00-05:00">15:00 EDT</time></small>-->
     </header>
 
     <main>
         <section>
-            <h2>Image Section</h2>
             <div class = "image-wrapper">     
-                <img src="https://placekitten.com/400/300" alt="Kitten">
+                <img src="assets/gameimage.png" id="gameImage">
+                <img src = "assets/gameimage2.png" id = "gameImage2" style="display:none;">
             </div>
-            
-            <p>
-                About: jnunlmljdmlindesinfkurs 
-            </p>
+            <div>
+                <button previous="onPreviousImage()"><</button>
+                <button next="onNextImage()">></button>
+            </div>
+            <hr>
         </section>
 
         <section>
             <div class ="content-wrap" >
                 <div class="column-left">
-                    <h3>Platform:</h3>
+                    <h3>Published:</h3>
+                    <p>5 days ago</p>
+                    <h3>Status:</h3>
+                    <p>Released</p>
+                    <h3>Platforms:</h3>
                     <p>Html, PC</p> 
-                    <h3>Tools Used:</h3>  
-                    <p>Gamemaker</p> 
-                    <h3>Duration</h3>
-                    <p>4 days</p>
-                    <h3>TeamSize</h3>
-                    <p>2</p>
-                    <h3>Genre</h3>
-                    <p>arcade, 2d, pixel art, gamemaker</p>
+                    <h3>Author</h3>
+                    <p><a href="https://aaiko.itch.io/">Aiko</a> (Programmer), </p>
+                    <p><a href="https://jammincogh.itch.io/">JamminCogh</a> (Artist)</p>
                 </div>
                 <div class="column-right">
                     <ul>
-                        <li>Python</li>
-                        <li>C# (.NET Framework)</li>
-                        <li>ReactJs / Typescript (UI/UX)</li>
-                        <li>SQL</li>
-                        <li>Pandas/ NumPy</li>
-                        <li>Pytorch/ Tensorflow/ Keras</li>
-                        <li>Google Colab/ Jupyter lab</li>
-                        <li>Streamlit/ flask / FastAPI</li>
-                        <li>LangChain / LlamaIndex</li>
-                        <li>AWS / GCP / Microsoft Azure</li>
-                        <li>ETL, OOP &  APIs</li>
-                        <li>Git & Github</li>
-                        <li>HuggingFace/ Vector Database </li>
-                        <li>PyCharm / Visual Studio code</li>
-                        <li>Data structures and algorithms</li>
+                        <li>The game "Bouncebuds" - an entry submitted to the Piratejam 14 gamejam in January of 2024.</li>
+                        <li>The game was created in GM2 and ported to Javascript to run as a HTML5 game on itch.io. The game is also deployable as an executable for Windows.</li>
+                        <li>The objective was to quickly design, implement, and polish a game within a short timespan. The primary requirement of the game was that it include a satisfying game-loop, without any bugs.</li>
+                        <li>The game features multiple instances, and switches between them, having one for primary gameplay, and another for the game over screen, which returns via keypress.</li>
+                        <li>The input for the game uses keybinds and can be played on keyboard with the 'A' and 'D' keys, with 'R' to restart.</li>
+                        <li>The gameplay consists of manouvring the player left and right to bounce on flowers to ascend higher, and reach a high score (determined by the maximum height reached).</li>
+                        <li>To prevent the scale of the game increasing indefinitely, all entities asides from the player are moved vertically based on player physics, instead of the player moving in game-space, and offscreen entities are removed.</li>
+                        <li>The game features scaling difficulty on a logorithmic curve so that the game gradually increases difficulty but never becomes impossible.</li>
+                        <li>The submission received multiple positive reviews, with suggestions to add more functionality to the "bee" enemy.</li>
                     </ul>
+                    <em>Tags:</em> 2D, Arcade, GameMaker, Asperite, piratejam, PixelArt
+                    <br><em>Genre:</em> Platformer
+                    <br><em>Tools Used:</em> Gamemaker
+                    
                 </div>
-  
             </div>
+            <hr>
           </section>
 
-        <section>
-            <h2>Video Section</h2>
+        <section class = "video-wrapper">
+            <h2>Demo</h2>
             <video controls>
-                <source src="sample.mp4" type="video/mp4">
+                <source src="assets/Bouncebuds_video_2.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
+            <hr>
         </section>
 
         <section>
             <h2>If you want to play click below:</h2>
-            <button onclick="openNewWebsite()">Click Me</button>
+            <button onclick="openItchWebsite()">Click Me</button>
         </section>
     </main>
 

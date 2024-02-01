@@ -1,6 +1,19 @@
 @media screen and (max-width:700px) {
-    /*@media tells css that it is going to run and if statement*/
-    body {grid-template-columns: 1fr;}
+    body {
+        font-size: 15px;
+    }
+    header {
+        padding: 5px;
+    }
+    div.info-wrapper {
+        grid-template-columns: 1fr;
+    }
+    video {
+        width: 600px;
+    }
+    section.video-wrapper {
+        text-align: left;
+    }
 }
 
 body {
@@ -57,7 +70,8 @@ div {
 }
 
 img {
-    width: 1000px;
+    width: 70%;
+    /*width: 1000px;*/
     border-radius: 8px;
     box-shadow: 0 10px 10px rgba(21, 176, 223, 0.826);
 }
@@ -67,9 +81,9 @@ img {
     padding: 20px;
 }
 
-.info-wrap {
+.info-wrapper {
     padding: 30px;
-    display:grid; 
+    display: grid; 
     grid-template-columns: 1fr 3fr;
 }
 
@@ -78,7 +92,7 @@ img {
 }
 
 video {
-    width: 1200px;
+    /*width: 1200px;*/
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -105,7 +119,7 @@ footer {
 }
 
 .PaceLogoImage {
-    width:15%;
+    width: 15%;
 }
 
 .image-logo-wrapper {

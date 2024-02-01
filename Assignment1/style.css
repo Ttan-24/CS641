@@ -1,17 +1,5 @@
-nav {
-    background: pink;
-    padding-top: 10px;
-    padding-bottom: 50px;
-}
-
-.navigation {
-    text-align: center;
-    width:100%;
-}
-
 @media screen and (max-width:700px) {
     /*@media tells css that it is going to run and if statement*/
-    p{background-color: hotpink;}
     body {grid-template-columns: 1fr;}
 }
 
@@ -36,10 +24,10 @@ kbd {
 }
   
 .cursor {
-    animation: interval 1s step-end infinite;
+    animation: curser-interval 1s step-end infinite;
 }
 
-@keyframes interval {
+@keyframes curser-interval {
     from, to { 
         opacity: 1; 
     }
@@ -69,14 +57,17 @@ div {
 }
 
 img {
-    /*max-width: 100%;*/
     width: 1000px;
     border-radius: 8px;
     box-shadow: 0 10px 10px rgba(21, 176, 223, 0.826);
 }
 
+.image-buttons {
+    text-align: center;
+    padding: 20px;
+}
 
-.content-wrap {
+.info-wrap {
     padding: 30px;
     display:grid; 
     grid-template-columns: 1fr 3fr;
@@ -111,4 +102,12 @@ footer {
     text-align: center;
     padding: 10px;
     bottom: 0;
+}
+
+.PaceLogoImage {
+    width:15%;
+}
+
+.image-logo-wrapper {
+    text-align: right;
 }

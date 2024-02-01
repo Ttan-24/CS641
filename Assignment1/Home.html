@@ -16,17 +16,17 @@
         <section>
             <div class = "image-wrapper">     
                 <img src="assets/gameimage.png" id="gameImage">
-                <img src = "assets/gameimage2.png" id = "gameImage2" style="display:none;">
+                <!--<img src = "assets/gameimage2.png" id = "gameImage2" style="display:none;">-->
             </div>
-            <div>
-                <button previous="onPreviousImage()"><</button>
-                <button next="onNextImage()">></button>
+            <div class = "image-buttons">
+                <button id = "previousbutton" onclick="onPreviousImage()"><b><</b></button>
+                <button id = "nextbutton" onclick="onNextImage()"><b>></b></button>
             </div>
             <hr>
         </section>
 
         <section>
-            <div class ="content-wrap" >
+            <div class ="info-wrap" >
                 <div class="column-left">
                     <h3>Published:</h3>
                     <p>5 days ago</p>
@@ -40,11 +40,11 @@
                 </div>
                 <div class="column-right">
                     <ul>
-                        <li>The game "Bouncebuds" - an entry submitted to the Piratejam 14 gamejam in January of 2024.</li>
+                        <li>The game "Bouncebuds" - an entry submitted to the <i>Piratejam 14 gamejam</i> in January of 2024.</li>
                         <li>The game was created in GM2 and ported to Javascript to run as a HTML5 game on itch.io. The game is also deployable as an executable for Windows.</li>
                         <li>The objective was to quickly design, implement, and polish a game within a short timespan. The primary requirement of the game was that it include a satisfying game-loop, without any bugs.</li>
                         <li>The game features multiple instances, and switches between them, having one for primary gameplay, and another for the game over screen, which returns via keypress.</li>
-                        <li>The input for the game uses keybinds and can be played on keyboard with the 'A' and 'D' keys, with 'R' to restart.</li>
+                        <li>The input for the game uses keybinds using <code>keyboard_check(ord("D"))</code> functionality and can be played on keyboard with the 'A' and 'D' keys, with 'R' to restart.</li>
                         <li>The gameplay consists of manouvring the player left and right to bounce on flowers to ascend higher, and reach a high score (determined by the maximum height reached).</li>
                         <li>To prevent the scale of the game increasing indefinitely, all entities asides from the player are moved vertically based on player physics, instead of the player moving in game-space, and offscreen entities are removed.</li>
                         <li>The game features scaling difficulty on a logorithmic curve so that the game gradually increases difficulty but never becomes impossible.</li>
@@ -69,13 +69,16 @@
         </section>
 
         <section>
-            <h2>If you want to play click below:</h2>
-            <button onclick="openItchWebsite()">Click Me</button>
+            <h2>If you want to play the game click below:</h2>
+            <button onclick="openItchWebsite()">Click here</button>
         </section>
     </main>
 
     <footer>
-        &copy; 2024 by Tanvi
+        <div class = "image-logo-wrapper">     
+            <img class = "PaceLogoImage" src="assets/pace-image-edited-logo.png">
+        </div>
+        &copy; 2024 by Tanvi Gavali
     </footer>
 </body>
 

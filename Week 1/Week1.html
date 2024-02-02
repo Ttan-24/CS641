@@ -1,6 +1,11 @@
 <html>
 <body>
 <style>
+button {
+    background-color: yellow;
+    transition: all 0.5s ease-in-out;
+}
+button:hover {background-color: green !important;}
 p {background-color: yellow;}
 .bluestuff {color: blue;}   /*class*/ /*<span style = "speak:spell-out">SSN</span>*/
 .orangestuff{background-color: orange; border-radius: 25px;}
@@ -14,11 +19,21 @@ img {width: 400px;}
     /*@media tells css that it is going to run and if statement*/
     p{background-color: hotpink;}
     body {grid-template-columns: 1fr;}
+    button {background-color: red;}
+    /*body div button.hello {background-color: blue;}*/
 }
 </style>
 
+<style media = "print">
+    p#myUniqueID {display: none;}
+</style>
 
-<div class = "orangestuff">Gosh, it's been so <i class = "blueStuff">cold</i> lately.</div>
+
+
+<div class = "orangestuff">
+    <button>Click me</button>
+    Gosh, it's been so <i class = "blueStuff">cold</i> lately.
+</div>
 <!--instead of having a class could also do--
     <div style = "background-color:darkorange">Gosh, it's been so <i class = "blueStuff">cold</i> lately.</div>-->
 

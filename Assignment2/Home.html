@@ -1,18 +1,80 @@
+<!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1">
     <link href = "style.css" rel="stylesheet" />
     <script src = "script.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
-    <title>Tanvi Game Website</title>
+    <title>Tanvi Books Website</title>
 </head>
 <body>
     <header>
-        <h1>Ultra Corporation</h1>
+        <h1>Bibliotheca Ultra Corporation</h1>
         
     </header>
 
     <main>
-        
+        <div class = "column-wrapper">
+           <div class = "book-wrapper">
+                <div class = "image-wrapper">
+                    <img src="assets/pride-and-prejudice.jpg" id="JaneAustenImage">
+                </div>
+                <h3>Pride and Prejudice</h3>
+                <h5>by <a href = "https://janeaustens.house/jane-austen/jane-austen-a-life/">Jane Austen</a></h5>
+                <h4>$4.09</h4>
+                <button id = "add-to-cart-button" onclick="onAddCart()">Add to cart</button>
+           </div> 
+           <div class = "book-wrapper">
+                <div class = "image-wrapper">
+                <img src="assets/great-expectations.jpg" id="CharlesDickensImage">
+                </div>
+                <h3>Great Expectations</h3>
+                <h5>by <a href = "https://www.historic-uk.com/CultureUK/Charles-Dickens/">Charles Dickens</a></h5>
+                <h4>$9.74</h4>
+                <button id = "add-to-cart-button" onclick="onAddCart()">Add to cart</button>
+           </div>
+        </div>
+        <div class = "column-wrapper">
+            <div class = "book-wrapper">
+                <div class = "image-wrapper">
+                    <img src="assets/don-quixote.jpg" id="CervantesImage">
+                </div>
+                <h3>Don Quixote</h3>
+                <h5>by <a href = "https://www.britannica.com/biography/Miguel-de-Cervantes">Cervantes</a></h5>
+                <h4>$14.99</h4>
+                <button id = "add-to-cart-button" onclick="onAddCart()">Add to cart</button>
+            </div>
+            <div class = "book-wrapper">
+                <div class = "image-wrapper">
+                    <img src="assets/the-picture-of-dorian-gray.jpg" id="OscarWildeImage">
+                </div>
+                <h3>The Picture of Dorian Gray</h3>
+                <h5>by <a href = "https://www.britannica.com/biography/Oscar-Wilde">Oscar Wilde</a></h5>
+                <h4>$8.99</h4>
+                <button id = "add-to-cart-button" onclick="onAddCart()">Add to cart</button>
+            </div>
+        </div>
+        <div class = "column-wrapper">
+            <div class = "book-wrapper">
+                <div class = "image-wrapper">
+                    <img src="assets/the-arthashastra.jpg" id="KautilyaImage">
+                </div>
+                <h3>The Arthashastra</h3>
+                <h5>by <a href = "https://www.newworldencyclopedia.org/entry/Kautilya">Kautilya</a></h5>
+                <h4>$12.99</h4>
+                <button id = "add-to-cart-button" onclick="onAddCart()">Add to cart</button>
+            </div>
+            <div class = "book-wrapper">
+                <div class = "image-wrapper">
+                    <img src="assets/the-odyssey.jpg" id="HomerImage">
+                </div>
+                <h3>The Odyssey</h3>
+                <h5>by <a href = "https://www.britishmuseum.org/blog/who-was-homer">Homer</a></h5>
+                <h4>$3.77</h4>
+                <button id = "add-to-cart-button" onclick="onAddCart()">Add to cart</button>
+            </div>
+        </div>
     </main>
 
     <footer>

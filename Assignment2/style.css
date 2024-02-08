@@ -1,7 +1,6 @@
 @media screen and (max-width: 700px) {
     main {
-        display:grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
     }
     img {
         max-width: 100%;
@@ -10,12 +9,14 @@
 
 body {
     font-family: "Source Sans Pro", sans-serif;
+    font-size: 18px;
     margin: 0;
 }
 
 header {
     font-family: "Source Sans Pro", sans-serif;
-    background-color: rgba(147, 199, 228, 0.601);
+    font-size: 15px;
+    background-color: #4da7a3;
     color: rgb(255, 255, 255);
     text-align: center;
     padding: 10px;
@@ -25,20 +26,19 @@ header {
 main {
     display:grid; 
     grid-template-columns: 1fr 1fr 1fr; 
-    background-image: linear-gradient(to bottom right, #dda5cd, #f5e9d6);
+    background-image: linear-gradient(to bottom right, #cdce71, #a2ece9);
 }
 
 .column-wrapper {
-    max-width: 100%
+    max-width: 100%;
 }
 
 .book-wrapper {
     background-color: #fff;
     border-radius: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin: 20px;
-    margin-right: 5px;
+    column-width:100%;
 }
 
 .image-wrapper {
@@ -48,20 +48,18 @@ main {
 img {
     max-width: 100%;
     border-radius: 8px;
-    box-shadow: 0 10px 10px rgba(21, 176, 223, 0.826);
-    /*transition: width 5s;*/
-    /*transition: transform 1.0s ease-in-out;*/
+    box-shadow: 0 10px 10px rgba(75, 190, 134, 0.77);
     
 }
 
 img:hover {
-    /*transform: scale(1.2);*/
     transform: rotateZ(-10deg);
 }
 
 button {
     font-family: "Source Sans Pro", sans-serif;
-    background-color: #61a7d0;
+    font-size: 14px;
+    background-color: #4ab6b0;
     color: white;
     padding: 20px 30px;
     border: none;
@@ -71,13 +69,13 @@ button {
 }
 
 button:hover {
-    background-color: #358dc0;
+    background-color: #3f8986;
     width: 130px;
     height: 60px;
 }
 
 button:active {
-    background-color: #dda5cd;
+    background-color: #a8c553ca;
 }
 
 footer {

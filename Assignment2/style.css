@@ -1,3 +1,13 @@
+@media screen and (max-width: 700px) {
+    main {
+        display:grid;
+        grid-template-columns: 1fr;
+    }
+    img {
+        max-width: 100%;
+    }
+}
+
 body {
     font-family: "Source Sans Pro", sans-serif;
     margin: 0;
@@ -40,14 +50,35 @@ img {
     border-radius: 8px;
     box-shadow: 0 10px 10px rgba(21, 176, 223, 0.826);
     /*transition: width 5s;*/
-    transition: transform 0.5s ease-in-out;
+    /*transition: transform 1.0s ease-in-out;*/
+    
 }
 
 img:hover {
-    /*width: 250px;*/
-    transform: scale(1.1);
+    /*transform: scale(1.2);*/
+    transform: rotateZ(-10deg);
 }
 
+button {
+    font-family: "Source Sans Pro", sans-serif;
+    background-color: #61a7d0;
+    color: white;
+    padding: 20px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: width 10s ease-in-out;
+}
+
+button:hover {
+    background-color: #358dc0;
+    width: 130px;
+    height: 60px;
+}
+
+button:active {
+    background-color: #dda5cd;
+}
 
 footer {
     background-color: #34495e;

@@ -1,0 +1,65 @@
+<html>
+    <body onmouseover="doSomethingWithTheMouse(event)">
+        <style>
+            h1 {
+                color: red;
+                font: 30pt Verdana;
+            }
+            #randomText {
+                color: purple; 
+                font-weight:bold;
+            }
+            #asteriod {
+                background-color:black; 
+                color: white; 
+                padding: 5px;
+                position: absolute; top: 50px; left: 50px;
+            }
+        </style>
+        <script>
+            function doSomethingWithTheMouse(theMouseObject) {
+                //console.log("In doSomethingWithTheMouse()...", theMouseObject);
+                console.log(theMouseObject.clientX, ", ", theMouseObject.clientY);
+                moveAsteriod(theMouseObject.clientX, theMouseObject.clientY);
+            }
+
+            function changeWord() {
+                console.log("In changeWorld()...");
+                let newWord = "boring";
+                //change random to boring 
+                let theWord = document.getElementById("randomText"); //give back the reference to that object
+                //debugger;
+                //theWord.innerText = newWord;
+                //theWord.innerHTML = "<img src = 'https://d2zp5xs5cp8zlg.cloudfront.net/image-78806-800.jpg'>";
+                let tempHTML = "";
+                for (let n = 0; n < 100; n++) {
+                    tempHTML += "<img src = 'https://d2zp5xs5cp8zlg.cloudfront.net/image-78806-800.jpg'>";
+                }
+                theWord.innerHTML = tempHTML;
+            }
+
+            function moveAsteriod(x, y) {
+                let theAsteriod = document.getElementById("asteriod");
+                // move it
+                //theAsteriod.style.top = "100px";
+                theAsteriod.style.top = y + "px";
+                theAsteriod.style.left = x + "px";
+            }
+
+            // adaptive - different version for the page
+            // mouse - touch events
+        </script>
+        <h1>
+        Random File
+        </h1>
+        <div id = "asteriod">
+            I am an asteriod
+        </div>
+        <p>
+            Hello, this is a <span id="randomText">random</span> page
+        </p>
+
+        <button onclick="changeWord()">Click me</button>
+        <button onclick="moveAsteriod()">Move the Asteriod</button>
+    </body>
+</html>

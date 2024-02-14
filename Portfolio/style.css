@@ -1,3 +1,13 @@
+@media screen and (max-width: 700px) {
+    body main div.portfolio-wrapper {
+        display:grid; 
+        grid-template-columns: 1fr;
+    }
+    img {
+        width: 100%;
+    }
+}
+
 body {
     margin: 0;
 }
@@ -17,6 +27,20 @@ h1 {
     font-family: "Source Sans Pro", sans-serif;
     font-size: 25px;
     text-align: left;
+}
+
+h2 {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
+
+h4 {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: white;
 }
 
 header div.nav-wrapper {
@@ -41,7 +65,7 @@ header div.nav a:hover {
 }
 
 main {
-    background-color: #597694;
+    background-color: #7592b0d3;
 }
 
 main div.intro-wrapper {
@@ -52,9 +76,75 @@ main div.intro-wrapper {
     padding: 200px;
 }
 
+#portfolio {
+    text-align: center;
+}
+
 main div.work-wrapper {
     display:grid; 
     grid-template-columns: 1fr 1fr 1fr;
+}
+
+main div.project-wrapper {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+#about {
+    background-image: linear-gradient(to right, #f8c6be , #a6c3e7);
+    text-align: center;
+    padding: 5px;
+}
+
+#contact {
+    background-image: #bad1ed;
+    display:grid; 
+}
+
+main div.about-wrapper {
+    display:grid; 
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+}
+
+main.div.about-para-wrapper {
+    
+}
+
+main.div.about-image-wrapper {
+    text-align: right;
+}
+
+#portfolioImage {
+}
+
+
+main div.contact-wrapper {
+    width: 80%;
+    padding : 40px;
+    margin: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+}
+
+input {
+    width: 100%;
+    padding: 10px; 
+    border: 0.5px solid #a9a7a7; 
+    border-radius: 6px; 
+    margin-bottom: 10px; 
+}
+
+#message {
+    height: 150px;
 }
 
 footer {

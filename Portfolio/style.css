@@ -1,5 +1,5 @@
 @media screen and (max-width: 700px) {
-    body main div.portfolio-wrapper {
+    body main div.work-wrapper {
         display:grid; 
         grid-template-columns: 1fr;
     }
@@ -36,11 +36,8 @@ h2 {
     color: white;
 }
 
-h4 {
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 20px;
-    text-align: center;
-    color: white;
+h3 {
+    color: rgb(255, 255, 255);
 }
 
 header div.nav-wrapper {
@@ -70,10 +67,15 @@ main {
 
 main div.intro-wrapper {
     background-image: linear-gradient(to right, #fce1ed , #bad1ed);
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 25px;
-    text-align: center;
+    background-image: url("assets/changedpixelart.png");
+    background-size: cover;
     padding: 200px;
+}
+
+#introtext {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 28px;
+    text-align: center;
 }
 
 #portfolio {
@@ -86,8 +88,17 @@ main div.work-wrapper {
 }
 
 main div.project-wrapper {
-    padding-top: 20px;
+    padding-top: 10px;
     padding-bottom: 20px;
+}
+
+main div.project-wrapper:hover img {
+    transition: opacity 0.5s ease;
+    opacity: 0.2;
+}
+
+main div.project-wrapper:hover .text-wrapper {
+    opacity: 1;
 }
 
 img {
@@ -95,16 +106,25 @@ img {
     border-radius: 8px;
 }
 
+main div.text-wrapper {
+    position: relative;
+    bottom: 50%;
+    opacity: 0;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 30px;
+    text-align: center;
+    text-shadow: black 0px 3px 3px;
+    color: white;
+}
+
+
 #about {
     background-image: linear-gradient(to right, #f8c6be , #a6c3e7);
     text-align: center;
     padding: 5px;
 }
 
-#contact {
-    background-image: #bad1ed;
-    display:grid; 
-}
+
 
 main div.about-wrapper {
     display:grid; 
@@ -123,29 +143,30 @@ main.div.about-image-wrapper {
 #portfolioImage {
 }
 
+#contact {
+    background-image: #bad1ed;
+}
 
 main div.contact-wrapper {
-    width: 80%;
-    padding : 40px;
-    margin: 10px;
+    display:grid; 
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
 }
 
-label {
-    display: block;
-    margin-bottom: 7px;
+main div.email-wrapper {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: white;
 }
 
-input {
-    width: 100%;
-    padding: 10px; 
-    border: 0.5px solid #a9a7a7; 
-    border-radius: 6px; 
-    margin-bottom: 10px; 
+main div.follow-wrapper {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: white;
 }
 
-#message {
-    height: 150px;
-}
 
 footer {
     background-color: #34495e;

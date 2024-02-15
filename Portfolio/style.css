@@ -1,10 +1,17 @@
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
     body main div.work-wrapper {
         display:grid; 
         grid-template-columns: 1fr;
     }
     img {
         width: 100%;
+    }
+    main div.intro-wrapper #introtext {
+        font-size: 20px;
+        text-align: left;
+    } 
+    body footer div.contact-wrapper {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -16,7 +23,7 @@ header {
     display:grid; 
     grid-template-columns: 1fr 1fr; 
     background-color: rgba(147, 199, 228, 0.601);
-    color: rgb(255, 255, 255);
+    color: rgb(117, 147, 157);
 }
 
 header div.logo-wrapper {
@@ -74,8 +81,9 @@ main div.intro-wrapper {
 
 #introtext {
     font-family: "Source Sans Pro", sans-serif;
-    font-size: 28px;
+    font-size: 30px;
     text-align: center;
+    text-shadow: black 0px 3px 3px;
 }
 
 #portfolio {
@@ -85,7 +93,6 @@ main div.intro-wrapper {
 main div.work-wrapper {
     display:grid; 
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr; 
 }
 
 main div.project-wrapper:hover img {
@@ -114,8 +121,20 @@ main div.text-wrapper {
     color: white;
 }
 
+main div.text-wrapper a {
+    text-decoration: none;
+    color: white;
+}
+
+main div.text-wrapper a:hover {
+    text-decoration: none;
+    color: rgb(207, 205, 205);
+}
+
+
 h6 {
-    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 
@@ -144,18 +163,37 @@ footer div.contact-wrapper {
     text-align: center;
 }
 
-footer div.email-wrapper {
+footer div.details-wrapper {
     font-family: "Source Sans Pro", sans-serif;
     font-size: 20px;
     text-align: center;
     color: white;
 }
 
-footer div.follow-wrapper {
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 20px;
-    text-align: center;
-    color: white;
+h5 a {
+    padding-left: 8px;
+    text-decoration: none;
+    color:rgb(195, 190, 190);
+}
+
+h5 a:hover {
+    color:rgb(255, 255, 255);
+}
+
+#mailicon {
+    width: 50px;
+    padding-top: 20px;
+}
+#mailicon:hover {
+    transform: scale(1.5);
+}
+
+#linkedinicon {
+    width: 40px;
+    padding-top: 20px;
+}
+#linkedinicon:hover {
+    transform: scale(1.5);
 }
 
 footer {

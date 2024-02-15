@@ -88,13 +88,13 @@ main div.work-wrapper {
 }
 
 main div.project-wrapper {
-    padding-top: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
 }
 
 main div.project-wrapper:hover img {
     transition: opacity 0.5s ease;
     opacity: 0.2;
+    transform: scale(1.1);
 }
 
 main div.project-wrapper:hover .text-wrapper {
@@ -124,49 +124,38 @@ main div.text-wrapper {
     padding: 5px;
 }
 
-
-
 main div.about-wrapper {
     display:grid; 
-    grid-template-columns: 1fr 1fr;
-    padding: 20px;
+    grid-template-columns: 1fr;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 18px;
+    text-align: center;
+    color: rgb(108, 101, 101);
 }
 
-main.div.about-para-wrapper {
-    
-}
 
-main.div.about-image-wrapper {
-    text-align: right;
-}
-
-#portfolioImage {
-}
-
-#contact {
-    background-image: #bad1ed;
-}
-
-main div.contact-wrapper {
+footer div.contact-wrapper {
     display:grid; 
     grid-template-columns: 1fr 1fr;
     text-align: center;
 }
 
-main div.email-wrapper {
+footer div.email-wrapper {
     font-family: "Source Sans Pro", sans-serif;
     font-size: 20px;
     text-align: center;
     color: white;
 }
 
-main div.follow-wrapper {
+footer div.follow-wrapper {
     font-family: "Source Sans Pro", sans-serif;
     font-size: 20px;
     text-align: center;
     color: white;
 }
-
 
 footer {
     background-color: #34495e;

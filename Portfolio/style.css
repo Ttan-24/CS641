@@ -93,6 +93,10 @@ main div.intro-wrapper {
 main div.work-wrapper {
     display:grid; 
     grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 20px;
+}
+main div.project-wrapper {
+    position: relative;
 }
 
 main div.project-wrapper:hover img {
@@ -111,8 +115,8 @@ img {
 }
 
 main div.text-wrapper {
-    position: relative;
-    bottom: 50%;
+    position: absolute;
+    top: 30px;
     opacity: 0;
     font-family: "Source Sans Pro", sans-serif;
     font-size: 25px;

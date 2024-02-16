@@ -1,0 +1,36 @@
+<html>
+<body id="theBody">
+    <h1>My Application</h1>
+
+    <div class="page" id="pageContainer">
+        <h3>Start Doing Something</h3>
+
+        Hello, please do something and then click Next.
+    </div>
+
+    <div class="button-container">
+        <button onclick="onNextButtonClick()">Next</button>
+    </div>
+
+    <style>
+        .page {background-color: yellow;}
+        .button-container {margin-top: 20px;}
+    </style>
+
+<script>
+function changePage() {
+    console.log("In changePage()...");
+}
+
+function onNextButtonClick () {
+    console.log("In onNextButtonClick()...");
+    let thePageContainer = document.getElementById("pageContainer");
+    let newPageHTML = "<h3>Finished</h3>Thank you.";
+    thePageContainer.innerHTML = newPageHTML;
+
+    let theBody = document.getElementById("theBody");
+    theBody.style.backgroundImage = "url(https://www.cats.org.uk/media/13136/220325case013.jpg?width=500&height=333.49609375)";
+}
+</script>
+</body>
+</html>

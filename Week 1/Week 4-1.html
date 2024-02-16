@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <style>
+            body {margin: 0;}
+        </style>
+    </head>
+<body style="background-color:yellow;" onmousemove="onBodyMouseOver(event)" ontouchmove="onBodytouchmove(event)">
+<canvas id = "myCanvas"></canvas>
+<script>
+    let canvas = document.getElementById("myCanvas");
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+    
+    let c = canvas.getContext("2d");
+    c.fillRect(20, 20, 100, 100);
+
+    function onBodyMouseOver(theMouseEvent) {
+        console.log(theMouseEvent.clientX, theMouseEvent.clientY);
+        c.fillRect(theMouseEvent.clientX, theMouseEvent.clientY, 10, 10);
+    }
+
+    function onBodytouchmove(theTouchEvent) {
+        for(var n=0; n < theTouchEvent.touches.length; n++) {
+            c.fillRect(theTouchEvent.touches[n].clientX, theTouchEvent.touches[n].clientY, 10, 10);
+        }
+
+        // the problem with below is you only get one line
+        //c.fillReact(theTouchEvent.touches[0].clientX, theTouchEvent.touches[0].clientY)
+    }
+    
+</script>
+</body>
+</html>

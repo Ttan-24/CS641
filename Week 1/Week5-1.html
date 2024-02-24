@@ -1,0 +1,42 @@
+
+<html>
+<body>
+
+<canvas id="theCanvas" height="200" width="300"></canvas>
+<br>
+<button id="theButton">Take a Picture</button>
+<br>
+<video id="theVideo" height="200" width="300"></video>
+
+<script>
+let canvas = document.getElementById("theCanvas");
+let button = document.getElementById("theButton");
+let video = document.getElementById("theVideo");
+button.addEventListener("click", takePicture);
+let c = canvas.getContext("2d");
+
+//optional
+c.fillStyle = "red";
+c.fillRect(0,0,canvas.width, canvas.height);
+
+navigator.mediaDevices.getUserMedia({video: true})
+      .then(function(stream) {
+        video.srcObject = stream;
+        video.onloadedmetadata = function(e) {
+          video.play();
+        };
+})
+      .catch(somethingBadHappened);
+
+function somethingBadHappened(errorInfo) {
+      console.log("No camera!!!!", errorInfo);
+}
+
+function takePicture() {
+      console.log("In takePicture()");
+      c.drawImage(video,0,0,video.width,video.height);
+}
+</script>
+
+</body>
+</html>

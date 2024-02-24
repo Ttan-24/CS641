@@ -1,0 +1,24 @@
+<html>
+    <body>  
+        <script>
+            addEventListener("keydown", myHandler);
+            //<body onkeydown="myHandler()">  
+            function myHandler(dataInMeAboutTheEvent) {
+                console.log("ouch..." + dataInMeAboutTheEvent);
+                if (dataInMeAboutTheEvent.key == "a") {
+                    console.log("Go left...");
+                }
+                if (dataInMeAboutTheEvent.key == "d") {
+                    console.log("Go right...");
+                }
+            }
+
+            // addEventListener("keydown", dkeydown);
+            // function dkeydown(D) {
+            //     console.log("You Hit D", D);
+            // }
+
+            
+        </script>
+    </body>
+</html>

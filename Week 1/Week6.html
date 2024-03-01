@@ -2,12 +2,17 @@
     <body>  
     <button onclick="batteryTest()">Battery Level</button>
     <button onclick="locationTest()">Location</button>
+    <button onclick="createNewWindow()">Create a New Window</button>
         <script>
+            function createNewWindow(latitude, longitude) {
+                window.open("https://www.google.com/maps/search/" + latitude + ",+" + longitude + "?sa=X&ved=2ahUKEwiF_4ik5NGEAxXckokEHVpQD2MQ8gF6BAgXEAA", "_new");
+                //_new always bringing a new window
+            }
             function batteryTest() {
                 navigator.getBattery().then(showBatteryLevel);
             }
             function locationTest() {
-                navigator.geolocation.getCurrentPosition(showLocation);
+                navigator.geolocation.getCurrentPosition(showLocation, onLocationError);
             }
             function showBatteryLevel(info) {
                 logStuff(info.level);
@@ -20,14 +25,17 @@
                 //console.log(result);
                 logStuff(result);
             }
-
+            
+            function onLocationError(e) {
+                logStuff("Something's wrong!" + e.message);
+            }
             function logStuff(stuff) {
                 console.log(stuff);
                 let resultsDiv = document.getElementById("results").innerText = stuff;
             }
         </script>
         <div id = "results">
-
+            Results Area
         </div>
 
         <style>

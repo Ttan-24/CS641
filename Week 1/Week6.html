@@ -1,0 +1,42 @@
+<html>
+    <body>  
+    <button onclick="batteryTest()">Battery Level</button>
+    <button onclick="locationTest()">Location</button>
+        <script>
+            function batteryTest() {
+                navigator.getBattery().then(showBatteryLevel);
+            }
+            function locationTest() {
+                navigator.geolocation.getCurrentPosition(showLocation);
+            }
+            function showBatteryLevel(info) {
+                logStuff(info.level);
+                //console.log(info.level);
+                //let resultsDiv = document.getElementById("results").innerText = info.level;
+            }
+            function showLocation(info) {
+                console.log(info, info.coords, info.coords.latitude);
+                let result = "Your location is " + info.coords.latitude + ", " + info.coords.longitude;
+                //console.log(result);
+                logStuff(result);
+            }
+
+            function logStuff(stuff) {
+                console.log(stuff);
+                let resultsDiv = document.getElementById("results").innerText = stuff;
+            }
+        </script>
+        <div id = "results">
+
+        </div>
+
+        <style>
+            #results {
+                margin-top: 10px;
+                border: 1px solid black;
+                padding: 10px;
+                background-color: #eee;
+            }
+        </style>
+    </body>
+</html>

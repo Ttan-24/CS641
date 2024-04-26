@@ -1,0 +1,16 @@
+<html>
+    <body onload="init()">
+        Enter your name: <form action="Week12.html" method="get"><input type="text" id="theName" name="theName">
+        <input type="submit"></form>
+        <br>
+        You entered: <span id = "theResult"></span>
+
+        <script>
+            function init() {
+                let myName = document.location.search;
+                let thePageLocationForTheName = document.getElementById("theResult").innerHTML = myName;
+                console.log(myName);
+            }
+        </script>
+    </body>
+</html>
